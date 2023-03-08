@@ -553,11 +553,30 @@ fmt<span class="token punctuation">.</span><span class="token function">Println<
  fmt<span class="token punctuation">.</span><span class="token function">Print</span><span class="token punctuation">(</span>num<span class="token punctuation">,</span> <span class="token string">" "</span><span class="token punctuation">)</span>
 <span class="token punctuation">}</span>
 </code></pre>
-完整的冒泡排序优化版的 Go 代码如下：<br>```go<br>package main</li>
+完整的冒泡排序优化版的 Go 代码如下：</li>
 </ol>
-<p>import “fmt”</p>
-<p>func main() {<br>    data := []int{5, 3, 8, 4, 2}<br>    swapped := true<br>    for swapped {<br>        swapped = false<br>        n := 0<br>        for i := 1; i &lt; len(data)-n; i++ {<br>            if data[i-1] &gt; data[i] {<br>                data[i], data[i-1] = data[i-1], data[i]<br>                swapped = true<br>            }<br>        }<br>        n++<br>    }<br>    for _, num := range data {<br>        fmt.Print(num, “ “)<br>    }<br>}</p>
-<pre><code>
+<pre class=" language-go"><code class="language-go"><span class="token keyword">package</span> main
+
+<span class="token keyword">import</span> <span class="token string">"fmt"</span>
+
+<span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    data <span class="token operator">:=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">int</span><span class="token punctuation">{</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">}</span>
+    swapped <span class="token operator">:=</span> <span class="token boolean">true</span>
+    <span class="token keyword">for</span> swapped <span class="token punctuation">{</span>
+        swapped <span class="token operator">=</span> <span class="token boolean">false</span>
+        n <span class="token operator">:=</span> <span class="token number">0</span>
+        <span class="token keyword">for</span> i <span class="token operator">:=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token function">len</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token operator">-</span>n<span class="token punctuation">;</span> i<span class="token operator">++</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> data<span class="token punctuation">[</span>i<span class="token number">-1</span><span class="token punctuation">]</span> <span class="token operator">></span> data<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token punctuation">{</span>
+                data<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> data<span class="token punctuation">[</span>i<span class="token number">-1</span><span class="token punctuation">]</span> <span class="token operator">=</span> data<span class="token punctuation">[</span>i<span class="token number">-1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> data<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
+                swapped <span class="token operator">=</span> <span class="token boolean">true</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        n<span class="token operator">++</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">for</span> <span class="token boolean">_</span><span class="token punctuation">,</span> num <span class="token operator">:=</span> <span class="token keyword">range</span> data <span class="token punctuation">{</span>
+        fmt<span class="token punctuation">.</span><span class="token function">Print</span><span class="token punctuation">(</span>num<span class="token punctuation">,</span> <span class="token string">" "</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 </code></pre>
 
                 
